@@ -6396,3 +6396,549 @@ ActionController::ParameterMissing (param not found: name):
   Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
   Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
   Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (63.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-15 08:59:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (46.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HousesController#index as HTML
+  [1m[35mHouse Load (1.5ms)[0m  SELECT "houses".* FROM "houses"
+  Rendered houses/index.html.erb within layouts/application (115.0ms)
+Completed 200 OK in 3385ms (Views: 2970.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-15 08:59:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-15 08:59:21 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-15 08:59:22 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-15 08:59:23 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-04-15 08:59:23 -0400
+
+
+Started GET "/students/new" for 127.0.0.1 at 2015-04-15 09:01:48 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/_form.html.erb (220.4ms)
+  Rendered students/new.html.erb within layouts/application (256.6ms)
+Completed 200 OK in 364ms (Views: 268.8ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2015-04-15 09:01:55 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mHpwGFid75Hl/mx7cLDe2MrYCIfrY+gnsol9Gy1VukM=", "student"=>{"name"=>"vfdd", "img_url"=>"fffs", "house"=>"fsdf"}, "commit"=>"Create Student"}
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param not found: name):
+  app/controllers/students_controller.rb:29:in `student_params'
+  app/controllers/students_controller.rb:18:in `create'
+
+
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (103.4ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2015-04-15 09:02:54 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mHpwGFid75Hl/mx7cLDe2MrYCIfrY+gnsol9Gy1VukM=", "student"=>{"name"=>"vfdd", "img_url"=>"fffs", "house"=>"fsdf"}, "commit"=>"Create Student"}
+Completed 400 Bad Request in 2ms
+
+ActionController::ParameterMissing (param not found: name):
+  app/controllers/students_controller.rb:29:in `student_params'
+  app/controllers/students_controller.rb:18:in `create'
+
+
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (71.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2015-04-15 09:03:53 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (2.4ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35mHouse Load (37.6ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mHouse Load (0.7ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHouse Load (0.5ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mHouse Load (0.4ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered students/index.html.erb within layouts/application (145.8ms)
+Completed 200 OK in 158ms (Views: 104.6ms | ActiveRecord: 48.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-15 09:03:53 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-15 09:03:53 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-04-15 09:03:53 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-15 09:03:53 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-15 09:03:53 -0400
+
+
+Started GET "/students" for 127.0.0.1 at 2015-04-15 09:04:01 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.8ms)[0m  SELECT "students".* FROM "students"
+  [1m[36mHouse Load (0.6ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mHouse Load (0.6ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHouse Load (0.3ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mHouse Load (0.3ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered students/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 21ms (Views: 17.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2015-04-15 09:04:02 -0400
+Processing by HousesController#index as HTML
+  [1m[36mHouse Load (0.6ms)[0m  [1mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2015-04-15 09:04:03 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (2.6ms)[0m  SELECT "students".* FROM "students"
+  [1m[36mHouse Load (1.6ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mHouse Load (0.7ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHouse Load (0.6ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mHouse Load (0.6ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered students/index.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 51ms (Views: 43.2ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2015-04-15 09:04:09 -0400
+Processing by HousesController#index as HTML
+  [1m[36mHouse Load (3.5ms)[0m  [1mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 23ms (Views: 16.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-15 09:31:45 -0400
+Processing by HousesController#index as HTML
+  [1m[35mHouse Load (2.6ms)[0m  SELECT "houses".* FROM "houses"
+  Rendered houses/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 81ms (Views: 70.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-15 09:31:46 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-15 09:31:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-15 09:31:46 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-04-15 09:31:46 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-15 09:31:46 -0400
+
+
+Started GET "/students" for 127.0.0.1 at 2015-04-15 09:34:46 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (1.3ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35mHouse Load (1.0ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mHouse Load (0.5ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHouse Load (0.3ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mHouse Load (0.5ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered students/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 49ms (Views: 44.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2015-04-15 09:34:53 -0400
+Processing by HousesController#index as HTML
+  [1m[35mHouse Load (1.1ms)[0m  SELECT "houses".* FROM "houses"
+  Rendered houses/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/houses/1" for 127.0.0.1 at 2015-04-15 09:38:00 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHouse Load (0.7ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mStudent Load (1.0ms)[0m  SELECT "students".* FROM "students" WHERE "students"."house_id" = $1  [["house_id", 1]]
+  Rendered houses/show.html.erb within layouts/application (84.1ms)
+Completed 200 OK in 126ms (Views: 90.6ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/houses/2" for 127.0.0.1 at 2015-04-15 09:38:14 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHouse Load (1.4ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mStudent Load (0.9ms)[0m  SELECT "students".* FROM "students" WHERE "students"."house_id" = $1  [["house_id", 2]]
+  Rendered houses/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/houses/3" for 127.0.0.1 at 2015-04-15 09:38:25 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mHouse Load (0.9ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mStudent Load (0.8ms)[0m  SELECT "students".* FROM "students" WHERE "students"."house_id" = $1  [["house_id", 3]]
+  Rendered houses/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/houses/4" for 127.0.0.1 at 2015-04-15 09:38:31 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mHouse Load (1.0ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mStudent Load (1.1ms)[0m  SELECT "students".* FROM "students" WHERE "students"."house_id" = $1  [["house_id", 4]]
+  Rendered houses/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 17ms (Views: 12.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2015-04-15 09:39:38 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/_form.html.erb (6.3ms)
+  Rendered students/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2015-04-15 09:39:43 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mHpwGFid75Hl/mx7cLDe2MrYCIfrY+gnsol9Gy1VukM=", "student"=>{"name"=>"dsad", "img_url"=>"dasd", "house"=>"dasda"}, "commit"=>"Create Student"}
+Completed 500 Internal Server Error in 3ms
+
+ActiveRecord::AssociationTypeMismatch (House(#70270877535020) expected, got String(#70270866302840)):
+  app/controllers/students_controller.rb:16:in `create'
+
+
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (68.1ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2015-04-15 09:42:52 -0400
+
+SyntaxError (/Users/nbumbarger/ga/projects/hogwarts/config/routes.rb:5: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+resources :students only: [:index, :show, :new]
+                        ^):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `block in load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:213:in `load_dependency'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `load'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `each'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (4.0.0) lib/active_support/file_update_checker.rb:75:in `call'
+  activesupport (4.0.0) lib/active_support/file_update_checker.rb:75:in `execute'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:7:in `execute'
+  railties (4.0.0) lib/rails/application/finisher.rb:81:in `block (2 levels) in <module:Finisher>'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:397:in `_run__4213409259259301446__prepare__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:74:in `prepare!'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:62:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/nbumbarger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/nbumbarger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/nbumbarger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (69.5ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2015-04-15 09:42:52 -0400
+
+ActionController::RoutingError (No route matches [GET] "/houses"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/nbumbarger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/nbumbarger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/nbumbarger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (47.1ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (93.7ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2015-04-15 09:42:56 -0400
+
+ActionController::RoutingError (No route matches [GET] "/houses"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/nbumbarger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/nbumbarger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/nbumbarger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (17.9ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (63.8ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2015-04-15 09:43:07 -0400
+
+ActionController::RoutingError (No route matches [GET] "/students"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/nbumbarger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/nbumbarger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/nbumbarger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (48.7ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2015-04-15 09:43:14 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.8ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35mHouse Load (0.6ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mHouse Load (0.4ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHouse Load (0.4ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mHouse Load (0.5ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered students/index.html.erb within layouts/application (67.3ms)
+Completed 200 OK in 83ms (Views: 68.7ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-15 09:43:14 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-15 09:43:14 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-15 09:43:14 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-15 09:43:14 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-04-15 09:43:14 -0400
+
+
+Started GET "/students/2" for 127.0.0.1 at 2015-04-15 09:43:17 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mStudent Load (1.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mHouse Load (0.5ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered students/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 20ms (Views: 15.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2015-04-15 09:43:19 -0400
+Processing by HousesController#index as HTML
+  [1m[35mHouse Load (1.8ms)[0m  SELECT "houses".* FROM "houses"
+  Rendered houses/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2015-04-15 09:49:03 -0400
+Processing by HousesController#index as HTML
+  [1m[36mHouse Load (0.7ms)[0m  [1mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 35ms (Views: 26.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-15 09:49:03 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-15 09:49:03 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-15 09:49:03 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-04-15 09:49:03 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-15 09:49:03 -0400
+
+
+Started GET "/students/new" for 127.0.0.1 at 2015-04-15 09:49:05 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/_form.html.erb (22.1ms)
+  Rendered students/new.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 58ms (Views: 37.7ms | ActiveRecord: 12.6ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2015-04-15 09:49:19 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mHpwGFid75Hl/mx7cLDe2MrYCIfrY+gnsol9Gy1VukM=", "student"=>{"name"=>"nick", "img_url"=>"ddad"}, "commit"=>"Create Student"}
+  [1m[35mHouse Load (0.7ms)[0m  SELECT "houses".* FROM "houses"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (230.9ms)[0m  INSERT INTO "students" ("created_at", "house_id", "img_url", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 15 Apr 2015 13:49:19 UTC +00:00], ["house_id", 4], ["img_url", "ddad"], ["name", "nick"], ["updated_at", Wed, 15 Apr 2015 13:49:19 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/students/10
+Completed 302 Found in 248ms (ActiveRecord: 233.0ms)
+
+
+Started GET "/students/10" for 127.0.0.1 at 2015-04-15 09:49:19 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mStudent Load (0.6ms)[0m  SELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", "10"]]
+  [1m[36mHouse Load (0.5ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered students/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-15 09:49:19 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-15 09:49:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-15 09:49:19 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-15 09:49:19 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-04-15 09:49:19 -0400
+
+
+Started GET "/images/ddad" for 127.0.0.1 at 2015-04-15 09:49:19 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images/ddad"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/nbumbarger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/nbumbarger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/nbumbarger/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (12.6ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/nbumbarger/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (151.7ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2015-04-15 09:49:26 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (2.9ms)[0m  SELECT "students".* FROM "students"
+  [1m[36mHouse Load (2.1ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mHouse Load (0.5ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHouse Load (0.4ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mHouse Load (0.4ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 ORDER BY "houses"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered students/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 33ms (Views: 24.9ms | ActiveRecord: 6.4ms)

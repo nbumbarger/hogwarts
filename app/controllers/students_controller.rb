@@ -8,14 +8,12 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
-
-
   def new
     @student = Student.new
   end
 
   def create
-    @student = Student.new(student_params)
+    @student = House.all.sample.students.new(student_params)
     if @student.save
       redirect_to @student
     else
@@ -23,9 +21,8 @@ class StudentsController < ApplicationController
     end
   end
 
-
   private
     def student_params
-        params.require(:name).permit(:img_url, :house)
+        params.require(:student).permit(:name, :img_url)
     end
 end
